@@ -20,35 +20,27 @@ struct CollisionResult{
 
 class Engine{
 public:
+    int screen_width;
+    int screen_height;
+
     Engine(int amount, int screen_height, int screen_width);
-    ~Engine();
 
     void update();
     void draw();
 
-    void logCollisionVelocity(float velocity);
-    void saveVelocityData();
-
-
 private:
-    float t;
-    std::vector<float> collisionVelocities; 
-    std::string velocityLogFile = "velocityLog.csv";
-
+    float timeVelocity = 1.5;
 
     std::vector<Ball> objects;
+    Vector2 GRAVITY = {0, 98.f*1.5f};
     float kinectEnergySystem;
-    Vector2 GRAVITY;
 
-
-    int const screen_width ;
-    int const screen_height;
-    
     void collision();
-    void gravity();
     int getRandomInt(int min, int max);
 
     CollisionResult computeVelocityAfterCollision(Ball b1, Ball b2);
+    void randomBalls(int amount);
+    void customBalls();
 };
 
 
