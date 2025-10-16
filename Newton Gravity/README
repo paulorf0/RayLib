@@ -15,8 +15,8 @@ Além da gravidade, o projeto também implementa:
 
 O gráfico abaixo ilustra a trajetória (posição) de cada bola ao longo do tempo. É possível observar as interações complexas que surgem a partir das simples regras da física implementadas.
 
-![Gráfico de Posição](image.png)
-![Gif da simulação](simulation_gif.gif)
+![Gráfico de Posição](images/image.png)
+![Gif da simulação](images/simulation_gif.gif)
 
 
 ## Física da Simulação
